@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Seguimiento Diario Interactiva</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .logrado { background-color: #90EE90; }
+        .medianamente { background-color: #FFD700; }
+        .no-logrado { background-color: #FFB6C1; }
+        .resumen {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        .guardar-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .guardar-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Tabla de Seguimiento Diario del Plan de Mejora de Estilo de Vida</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Actividad</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                    <th>Sábado</th>
+                    <th>Domingo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>5 comidas planificadas</td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>4 sesiones de ejercicio</td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>3 sesiones de meditación o yoga</td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>7 horas de sueño</td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                    <td><select onchange="actualizarColor(this)">
+                            <option value="logrado">Logrado</option>
+                            <option value="medianamente">Medianamente Logrado</option>
+                            <option value="no-logrado">No Logrado</option>
+                        </select></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="resumen" id="resumen">
+            <h3>Resumen Semanal</h3>
+            <p>Objetivos logrados: <span id="logrados">0</span></p>
+            <p>Objetivos medianamente logrados: <span id="medianamente">0</span></p>
+            <p>Objetivos no logrados: <span id="no-logrados">0</span></p>
+        </div>
+
+        <button class="guardar-btn" onclick="guardarProgreso()">Guardar Progreso</button>
+    </div>
+
+    <script>
+        function actualizarColor(select) {
+            select.classList.remove('logrado', 'medianamente', 'no-logrado');
+            select.classList.add(select.value);
+            actualizarResumen();
+        }
+
+        function actualizarResumen() {
+            let logrados = document.querySelectorAll('select.logrado').length;
+            let medianamente = document.querySelectorAll('select.medianamente').length;
+            let noLogrados = document.querySelectorAll('select.no-logrado').length;
+
+            document.getElementById('logrados').textContent = logrados;
+            document.getElementById('medianamente').textContent = medianamente;
+            document.getElementById('no-logrados').textContent = noLogrados;
+        }
+
+        function guardarProgreso() {
+            const selects = document.querySelectorAll('select');
+            const progreso = Array.from(selects).map(select => select.value);
+            localStorage.setItem('progreso', JSON.stringify(progreso));
+            alert('¡Progreso guardado exitosamente!');
+        }
+
+        function cargarProgreso() {
+            const progreso = JSON.parse(localStorage.getItem('progreso'));
+            if (progreso) {
+                const selects = document.querySelectorAll('select');
+                selects.forEach((select, index) => {
+                    select.value = progreso[index];
+                    actualizarColor(select);
+                });
+            }
+        }
+
+        // Cargar progreso al iniciar
+        cargarProgreso();
+    </script>
+</body>
+</html>
